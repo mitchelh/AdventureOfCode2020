@@ -5013,23 +5013,21 @@ items.forEach(item => {
     var value2IsLetter = false;
 
     password.forEach((character, index) => {
-			if(index + 1 === Number(value1)) {
-
-				if(character === item.letter) {
-            value1IsLetter = true;
+        if(index + 1 === Number(value1)) {
+	    if(character === item.letter) {
+	        value1IsLetter = true;
+	    }
         }
-			}
-      if(index + 1 === Number(value2)) {
+        if(index + 1 === Number(value2)) {
 
-        if(character === item.letter) {
-          value2IsLetter = true;
-        }
-      }
-        
+            if(character === item.letter) {
+	        value2IsLetter = true;
+            }
+	} 
     });
-      if(value1IsLetter && !value2IsLetter || !value1IsLetter && value2IsLetter) {
-    validPwd++
-  }
+    if(value1IsLetter && !value2IsLetter || !value1IsLetter && value2IsLetter) {
+        validPwd++
+    }
 });
 
 console.log(validPwd);
