@@ -5019,3 +5019,5 @@ items.forEach(item => {
     validPwd++
   }
 });
+
+console.log(validPwd);
